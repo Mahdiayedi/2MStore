@@ -1,0 +1,220 @@
+<html>
+<head>
+<title>MedicInfo | Sign Up</title>
+	<link rel="stylesheet" type="text/css" href="signup.css"/>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="header.css">
+</head>
+<body>
+		<div class="border"></div>
+	<div id="hints"></div>
+	<div class="medictab">
+		
+			<center><img src="img/2M.png" >
+			 <marquee behavior="alternate" height="-400px" width="1300px" Style ="font-size:24px;
+  color:#C6302C; font-weight:bold;">Protéger les gens | Sauver des vies    </marquee>
+		</center>
+		
+	</div>
+
+
+	<div class="navigation" id="navigation">
+	
+		<ul>
+			<li> 
+			<a href="Acceuil.html" class="active">
+Acceuil</a></li>
+						
+			<li class="dropdown">
+				<a href="disease.html" class="dropbtn">
+Maladies</a>
+			
+			</li>
+			
+
+			<li class="dropdown">
+				<a href="medicine.html" class="dropbtn">
+Médicament</a>
+				
+			</li>
+			
+			
+			<li><a href="sympcheck.html">Vérificateur de symptômes</a></li>
+			<div style= "float :right; ">
+			
+			<li><a href="signup.html" style="border-left: 1px solid powderblue;" class="active">Sign Up</a></li>
+			<li><a href="login.html">Login</a></li>
+		<div>
+</li>
+
+		</ul>
+
+	</div>
+	<br/>
+
+	<p id="toppara">
+		Register With the World of MedicInfo and Enjoy Benefits like Symptom Checker and Online Quiz...<br/>
+		<span style="font-size: 18px;">It is simple, we need basic information only!!</span>
+	</p>
+
+<br/>
+	
+	<form name="regform" method="post" class="formcss">
+		<fieldset>
+			<legend style="letter-spacing: 1px; font-family: Helvetica; font-size: 20px; color: #C40000; font-weight: bold;">Register With MedicInfo</legend>
+			Name : <br/>
+			<input type="text" name="fname" value="" placeholder="First Name / UserName" title="Enter your First name" />&nbsp
+			<input type="text" name="lname" value="" placeholder="Last Name" title="Enter your Last name"><br>
+			<span id="fnameerr"></span>&nbsp 
+			<span id="lnameerr"></span><br/>
+
+			Email Address : <br/><input type="email" name="email" value="" placeholder="Enter your E-mail" title="Enter Valid E-Mail" /><br><span id="emailerr"></span><br/>
+			
+			Date Of Birth  (optional) : <br/><br/><input type="date" name="dob" value=""/><br><span id="doberr"></span><br/>
+
+			Age : <br/>
+			
+			<input type="number" name="age" value="" min="12" required="required"/><br/><br/>
+
+			Sex :<br><label for="male" style="font-size: 16px;">Male</label><input type="radio" name="sex" id="male" value="male">
+			<label for="female" style="font-size: 16px;">Female</label><input type="radio" name="sex" id="female" value="female">
+			<br/><span id="sexerr"></span><br/>
+			Blood Group : <br/><input type="text" name="bldgroup" placeholder="Your Blood Group" title="Enter your Blood Group" /><br><span id="bldgerr"></span><br/>
+			
+			Password : <br/><input type="password" name="password" placeholder="Password" title="Password should be of length greater than 8" /><br><span id="passerr"></span><br/>
+			
+			Confirm Password : <br/><input type="password" name="re_password" placeholder="Re-enter Password" title="Type the same Password as above" /><br><span id="confpasserr"></span><br/>
+
+			<input type="submit" name="submit" value="Register" onclick="return validate(this.form)" />&nbsp
+			<input type="reset" name="Reset" />
+
+		</fieldset>
+	</form>
+
+	
+	<script type="text/javascript">
+
+	var refname = document.getElementById("fnameerr");
+	var relname = document.getElementById("lnameerr");
+	var reemail = document.getElementById("emailerr");
+	var redob = document.getElementById("doberr");
+	var regen = document.getElementById("sexerr");
+	var repass = document.getElementById("passerr");
+	var rebldg = document.getElementById("bldgerr");
+	var reconf = document.getElementById("confpasserr");
+
+	function validate(form) {
+		// body...
+		var text = "";
+		if (form.fname.value=="" ) {
+			text = "First name cannot be empty";
+			refname.innerHTML = text;
+			form.fname.value = "";
+			return false;
+		}
+		if(form.fname.value.match(/[0-9]/)) {
+			text = "First name cannot contain numbers";
+			refname.innerHTML = text;
+			form.fname.value = "";
+			return false;
+		}
+		if(form.fname.value!="" && !form.fname.value.match(/[0-9]/)) {
+			refname.innerHTML = "";
+		}
+
+		if (form.lname.value=="" ) {
+			text = "Last name cannot be empty";
+			relname.innerHTML = text;
+			form.lname.value = "";
+			return false;
+		}
+		if(form.lname.value.match(/[0-9]/)) {
+			text = "Last name cannot contain numbers";
+			relname.innerHTML = text;
+			form.lname.value = "";
+			return false;
+		}
+		if(form.lname.value!="" && !form.lname.value.match(/[0-9]/)) {
+			relname.innerHTML = "";
+		}
+
+		if(form.email.value=="" || form.email.value.indexOf('@',0)==-1 || form.email.value.indexOf('.')==-1 || form.email.value.indexOf('.')==0) {
+			text = "Enter valid E-mail";
+			reemail.innerHTML = text;
+			form.email.value = "";
+			return false;
+		}
+		if(form.email.value!="" && form.email.value.indexOf('@',0)!=-1 && form.email.value.indexOf('.')!=-1 && form.email.value.indexOf('.')!=0) {
+			reemail.innerHTML = "";
+		}
+
+		if (form.sex[0].checked==false && form.sex[1].checked==false) {
+			text = "Please choose your Sex";
+			regen.innerHTML = text;
+			return false;
+		}
+		if (form.sex[0].checked==true || form.sex[1].checked==true) {
+			regen.innerHTML = "";
+		}
+
+		if (form.bldgroup.value=="") {
+			text = "Blood Group cannot be empty";
+			rebldg.innerHTML = text;
+			form.bldgroup.value = "";
+			return false;
+		}
+		if (!form.bldgroup.value.match(/^(A|B|O|AB)[+-]$/)) {
+			text = "Enter Valid Blood Group";
+			rebldg.innerHTML = text;
+			form.bldgroup.value = "";
+			return false;
+		}
+		if (form.bldgroup.value.match(/^(A|B|O|AB)[+-]$/)) {
+			rebldg.innerHTML = "";
+		}
+		
+
+		if (form.password.value.toString().length<9) {
+			text = "Password should contain atleast 9 letters";
+			repass.innerHTML = text;
+			form.password.value = "";
+			return false;
+		}
+		if (form.password.value.toString().length>8) {
+			repass.innerHTML = text;
+		}
+		
+		if ((form.re_password.value.toString()).localeCompare(form.password.value.toString())!=0) {
+			text = "Password not matching";
+			reconf.innerHTML = text;
+			form.re_password.value = "";
+			return false;
+		}
+		if ((form.re_password.value.toString()).localeCompare(form.password.value.toString())==0) {
+			reconf.innerHTML = "";
+		}
+		
+		alert("Form Submitted");
+		return true;
+
+	}
+
+	</script>
+
+
+<br/><br/><br/><br/><br/><br/>
+	<div id="footer">
+		<p style="text-align: center; font-size: 11px;">Thank you for visiting</p>
+		<p style="text-align: center;">MEDICINFO</p>
+		<p style="font-size: 11px; text-align: center;">Contact Us | Visit Again | Stay Healthy</p>
+		<hr/>
+		<p style="color: #DCFFFE; margin-left: 10px; font-size: 19px;">Maintained By: -
+		<ul id="credits">
+			<li>Kunal</li>
+			<li>Kanishk</li>
+			<li>Siddharth</li>
+		</ul></p>
+	</div>
+
+</body>
+</html>
