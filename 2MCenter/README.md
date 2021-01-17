@@ -37,7 +37,7 @@ base de données pour accéder aux scripts PHP.
 modèle relationnel, accessible par des requêtes SQL.
 
 
-2. ** CONTRÔLEUR DE SYMPTÔMES: **
+**CONTRÔLEUR DE SYMPTÔMES: **
 
 Dans la page de vérification des symptômes, le concept de mappage d'image est appliqué. Image de
 le corps humain est montré et un lien est créé avec chaque partie du corps comme la tête, les jambes, etc.
