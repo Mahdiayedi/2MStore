@@ -1,2 +1,0 @@
-# 2MMedicalCenter
-logiciel medicale
