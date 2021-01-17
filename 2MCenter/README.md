@@ -2,106 +2,51 @@
 
 ### Introduction
 
-Aim of project is to develop a medical website which could operate for the
-analysis of symptoms seen in patient (user); moreover it is also helpful to get
-information about diseases and their respective medicines, with help of which
-user can get knowledge of medicines about when and at what situation it can be
-used.
+Le but du projet est de développer un site Web médical qui pourrait fonctionner pour le
+analyse des symptômes observés chez le patient (utilisateur); de plus, il est également utile d'obtenir
+des informations sur les maladies et leurs médicaments respectifs, à l'aide desquelles
+l'utilisateur peut obtenir des informations sur les médicaments pour savoir quand et dans quelle situation il peut se trouver
+utilisé.
 
-For the development of this project languages used are:
+Pour le développement de ce projet, les langages utilisés sont:
 
 * PHP
 * HTML
 * AJAX
 * JAVASCRIPT
-* CSS (Designing)
+* CSS (conception)
 
-Front-hand is handled using html and JavaScript, by the use of which userinterface is handled like navigation bar for navigating between different
-webpages, content handling and its display is also done by same. Creating popup forms, validation and different functions and are handled by JavaScript and
-php. Ajax is used for search implementation and hints provided during
-searching. Database is managed by MySQL using php commands. Data fetching
-and storing and handling of data is done by php commands. Firstly navigation bar contains’ Diseases’,’ Medicines’ pages for information,
-quizzes, home and symptom checker for analysing symptoms. Information of
-medicines and diseases are stored in table in database from which it is fetched
-and displayed, specifically in these two pages vertical navigation is given to
-navigate between stack of medicines and diseases. Other than these’ Quizzes’
-are just for enhancing the interaction with user by showing score and knowledge
-awareness of particular information. As commonly followed ‘About us‘ page is
-also included which gives overall short introduction of ours and our specialities.
-In ‘Home’ page also our extra features like BMI calculation and symptoms
-checking are mentioned which are designed by css. Apart from these for
-‘Symptom checking’ page is operated by image mapping concept, which is
-helpful for searching for diseases and connected to database accordingly.
+Le front-hand est géré en utilisant HTML et JavaScript, par l'utilisation de quelle interface utilisateur est gérée comme une barre de navigation pour naviguer entre différents
+les pages Web, la gestion du contenu et son affichage se font également de la même manière. Création de formulaires popup, validation et différentes fonctions et sont gérés par JavaScript et php
 
 
-### Software Requirements
+### Logiciels requis
 
-For the development of this project languages used are:
+Pour le développement de ce projet, les langages utilisés sont:
 
-* **PHP:** Used as a Server Side Scripting Language.
-* **HTML:** Used to make the Body of the Web Page.
-* **AJAX:** Prevent Re-loading of the page and saves time by showing
-output on the same page.
-* **JAVASCRIPT:** Used to make web pages dynamic, often used to
-validate forms.
-* **CSS (Designing):** Used to Design the Web Page.
-* **XAMPP:** Used as an alternative to Apache Server and MySQL
-database for accessing PHP scripts.
-* **MySQL DATABASE:** Used to store information in forms of table as a
-relational model, accessed by SQL Queries.
-
-#
-1. **HOME-PAGE:**
-
-Starting with the Home Page, we included two CSS file named ‘Header.css’
-and ‘homepage.css’ these files contain the code for the styling of the page’s
-top. Class ‘border’ defines border, ID ‘hints’ is used for the Search
-implementation that becomes visible when the user type something on the
-Search bar, ‘medictab’ defines the MedicInfo’s header, then the classes
-‘dropdown’, ‘dropbtn’, ‘dropctn’ are all used to perform hover over the tabs.
-
-![Home Page](homepage.png)
-
-2. **SEARCH IMPLEMENTATION:**
-
-```
-<form action="SearchResults.php" method="GET" autocomplete="off">
-<input type="text" name="search" placeholder="Search Diseases..." size="30" onkeyup="showHints(this.value)"/>
-<input type="submit" value="Search" />
-</form>
-```
+* ** PHP: ** Utilisé comme langage de script côté serveur.
+* ** HTML: ** Utilisé pour créer le corps de la page Web.
+* ** AJAX: ** Empêche le rechargement de la page et gagne du temps en affichant
+sortie sur la même page.
+* ** JAVASCRIPT: ** Utilisé pour rendre les pages Web dynamiques, souvent utilisé pour
+valider les formulaires.
+* ** CSS (Conception): ** Utilisé pour concevoir la page Web.
+* ** XAMPP: ** Utilisé comme alternative à Apache Server et MySQL
+base de données pour accéder aux scripts PHP.
+* ** MySQL DATABASE: ** Utilisé pour stocker des informations sous forme de table sous forme de
+modèle relationnel, accessible par des requêtes SQL.
 
 
+2. ** CONTRÔLEUR DE SYMPTÔMES: **
 
-3. **DISEASE PAGE:**
-
-Disease page deals with the 10 diseases listed on the page and using a frame for
-displaying the result marking/highlighting the disease that is being displayed on the frame. This is done using the frame name and 10 HTML pages that are all
-linked to the frame as a target through its name. When someone clicks the
-vertical tabs, it links that page being called and displayed on the frame rather
-loading a new page. The tabs on the left side gets highlighted showing the
-current frame that is displaying on the page. This is done with the help of java
-script that changes color when a link a pressed and keep all other thing same as
-before. So for doing this it requires 10 such cases where this changes happens
-therefore 10 times we have copy each thing then only changing the required link
-color. This same goes for the Medicines page. 
-
-
-4. **SYMPTOM CHECKER:**
-
-In symptom checker page concept of image mapping is applied. Image of
-human body is shown and link is created to body’s each part like head, legs, etc.
-So user clicks on the part in which user has suffering, this makes site more
-interactive and does less tedious work. After this each & every link is connected
-to database of information of diseases and symptoms of that part of body which
-is displayed when user clicks body part.
-
+Dans la page de vérification des symptômes, le concept de mappage d'image est appliqué. Image de
+le corps humain est montré et un lien est créé avec chaque partie du corps comme la tête, les jambes, etc.
+Ainsi, l'utilisateur clique sur la partie dans laquelle l'utilisateur a souffert, cela rend le site plus
+interactif et fait un travail moins fastidieux.
 
 
 ### Conclusion
 
-Project was successfully completed with proper implementation of languages
-like php, JavaScript, html and css. By the means of this project we came to
-know many new concepts and ideas i.e. implementing search by ajax, using
-imagemapping concept for recognizing and analysing symptoms of user.
-
+Le projet a été mené à bien avec une mise en œuvre appropriée des langues
+comme php, JavaScript, html et css. Grâce à ce projet, nous sommes arrivés à
+connaître de nombreux nouveaux concepts et idées.
